@@ -5,11 +5,11 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.Final.Sample", "Photino.Final.Sample\Photino.Final.Sample.csproj", "{25056170-F7AD-4E62-B287-EF04AB24165A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.NET.Server", "..\..\github\Photino\Photino.NET.Server\Photino.NET.Server\Photino.NET.Server.csproj", "{C46BA783-B624-4F06-BC9B-F2C7F7922C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.NET.Server", "..\Photino.NET.Server\Photino.NET.Server\Photino.NET.Server.csproj", "{C46BA783-B624-4F06-BC9B-F2C7F7922C8E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.NET", "..\..\github\Photino\Photino.NET\Photino.NET\Photino.NET.csproj", "{D5C588E8-7944-4C0C-85BB-7A62C67C51B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.NET", "..\Photino.NET\Photino.NET\Photino.NET.csproj", "{D5C588E8-7944-4C0C-85BB-7A62C67C51B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photino.IPC", "..\..\github\Photino\Photino.NET\Photino.IPC\Photino.IPC.csproj", "{971F6349-032F-462A-891D-21A0CB8EF6C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photino.IPC", "..\Photino.NET.IPC\Photino.NET.IPC\Photino.NET.IPC.csproj", "{971F6349-032F-462A-891D-21A0CB8EF6C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

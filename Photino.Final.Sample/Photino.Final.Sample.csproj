@@ -12,11 +12,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\github\Photino\Photino.NET.Server\Photino.NET.Server\Photino.NET.Server.csproj" />
-		<ProjectReference Include="..\..\..\github\Photino\Photino.NET\Photino.IPC\Photino.IPC.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<!-- Don't publish the SPA source files, but do show them in the project files list -->
 		<Content Remove="$(UiRoot)**" />
 		<None Remove="$(UiRoot)**" />
@@ -25,6 +20,11 @@
 
 	<ItemGroup>
 	  <Folder Include="Interface\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Photino.NET.Server\Photino.NET.Server\Photino.NET.Server.csproj" />
+	  <ProjectReference Include="..\..\Photino.NET.IPC\Photino.NET.IPC\Photino.NET.IPC.csproj" />
 	</ItemGroup>
 
 	<Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(UiRoot)node_modules') ">
