@@ -42,3 +42,6 @@ I've added a simple IPC (Inter-Process Communication) channel system, inspired b
 So, here's the grand finale my **"Photino.Final.Sample"** project. It's like a mashup of all the tweaks I've been talking about. I tossed everything in there to see if it all works with the latest changes. To make life easier, think about throwing this project into the sample repository. Just swap out references to other projects with the actual NuGet packages, and we're good to go!
 
 Big thanks to everyone who threw down in this project! 🚀 Your hustle is real, and I appreciate every line of code, idea, and vibe you brought to the table. Hoping this sails through smooth! 🌟
+
+>P.S. <br>
+I've tested the code with the help of the TestBench project inside the Samples, but only on Windows. I can try the functionalities in Linux using the WSL 2 but I don't have access to a MacOS device, so if someone is willing to help me all the repo are in the main discussion post
