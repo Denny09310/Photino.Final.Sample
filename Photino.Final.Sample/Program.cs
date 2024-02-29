@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Photino.NET;
-using Photino.NET.IPC;
 using Photino.NET.Extensions;
+using Photino.NET.IPC;
 
 internal class Program
 {
@@ -12,7 +12,7 @@ internal class Program
         var builder = PhotinoApplicationBuilder.CreatePhotinoBuilder(args, out var url);
 
         // Adds the IPCService inside the depdendency container
-        builder.Services.AddIPC();
+        builder.Services.AddInterProcessCommunication();
 
         // Configure the IOptions<PhotinoDevelopmentServerOptions>
         builder.Services.Configure<PhotinoDevelopmentServerOptions>(options =>
@@ -32,7 +32,7 @@ internal class Program
             .RegisterChannelHandler<string>("PHOTINO_TEST_CHANNEL", (sender, message) =>
             {
                 Console.WriteLine($"Received {message} from IPC Renderer");
-                sender.Emit("Pong");
+                sender.Emit("Hello from .NET 🤖");
             });
 
         /* 

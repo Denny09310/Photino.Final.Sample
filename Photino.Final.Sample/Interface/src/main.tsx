@@ -11,4 +11,4 @@ const router = createHashRouter(routes);
 ReactDOM.createRoot(document.getElementById("root")!).render(<RouterProvider router={router} />);
 
 const channel = new PhotinoChannel<string>("PHOTINO_TEST_CHANNEL");
-channel.sendMessage("ping").then(console.log);
+channel.sendMessage("Hello, from React!").then(alert);
