@@ -16,11 +16,11 @@ class PhotinoChannel<T> {
     window.external.receiveMessage((message) => {
       const { faulted, payload } = PhotinoPayload.tryFromJson<T>(message);
 
-      if (faulted || !payload) return;
-      if (payload.key !== key) return;
+      if (!payload || payload.key !== key) return;
       if (!this.promise || !this.promiseResolve || !this.promiseReject) return;
 
-      this.promiseResolve(payload.data);
+      if (faulted) this.promiseReject(payload.data);
+      else this.promiseResolve(payload.data);
     });
   }
 
