@@ -1,14 +1,16 @@
 # Photino.NET Project Update (26/02/2024) 🚀
 
->Hey folks, just dropping a quick update on the Photino.NET scene. This is just a heads up, I'm sharing it here 'cause I kicked off the convo. If it's not the right spot, just send me a message.
+>Dear community members, 
 
-So, it's been about a year since I started this discussion. I haven't been grinding into the project every single day, but got a few things to share.
+I am pleased to provide a brief update on the recent developments within the Photino.NET project. I hope this communication finds you well, and I appreciate your attention to this update. Should you find this platform unsuitable for such information, please feel free to direct your queries to me via private message.
 
-## Project Naming Tweaks 
+Over the past year, since the inception of our discussions, I've not been immersed in the project on a daily basis. However, I have some noteworthy progress to share.
 
-First off, noticed all the projects are rolling with the name **Photino.***, but the namespace is PhotinoNET. A bit wonky, right? At least for me, so I made a small tweak to keep things in sync. It might ruffle some feathers, but no worries it's reversible if it's not your jam.
+## Project Naming Adjustments 
 
-Inside Photino.NET, made some updates to the language conventions. Check this out:
+First and foremost, I observed that all projects are utilizing the name **Photino.***, while the namespace is specified as PhotinoNET. This inconsistency prompted me to make a minor adjustment to ensure coherence. While this change may cause some initial dissonance, rest assured it is reversible if it doesn't align with the community's preferences.
+
+Within Photino.NET, I have made updates to language conventions. Please review the following code snippet:
 
 ```csharp
 #if NET7_0_OR_GREATER
@@ -25,23 +27,22 @@ Inside Photino.NET, made some updates to the language conventions. Check this ou
 #endif
 ```
 
-Might look a bit like doubling the code, but it's all about supporting .NET 6 until it waves goodbye 👋. The current setup, leaning on source generators, amps up project performance and keeps it smooth without leaning on runtime tricks. Also sprinkled in some C# 12 syntactic sweetness.
+While it may appear to duplicate code, this adjustment is aimed at supporting .NET 6 until its deprecation. The current configuration, leveraging source generators, enhances project performance without relying on runtime tricks. Additionally, I've incorporated syntactic improvements introduced in C# 12.
 
-## Dev Server Glow-Up in Photino.NET.Server
+## Development Server Enhancement in Photino.NET.Server
 
-Big things happening in the Photino.NET.Server package! Revamped the dev server, inspired by the #121 chat shoutout to @manuel3108 for the initial code! As a React dev, I've made a simple static server that knows when to attach to a localserver in DEVELOPMENT and use the wwwroot files in PRODUCTION.
+Significant enhancements have been implemented in the Photino.NET.Server package! The development server has undergone a revamp, inspired by the #121 chat discussion with a special shoutout to @manuel3108 for the initial code! As a React developer, I've created a straightforward static server that intelligently attaches to a local server in DEVELOPMENT and utilizes the wwwroot files in PRODUCTION.
 
-To make life easy for AspNET folks making the switch to Photino, took some cues from the AspNET Core playbook. Introduced a cool PhotinoApplication class, kind of like the WebApplication one and brought in a 'PhotinoAppBuilder' to enhanche the existing WebAppBuilder. Bunch of extension methods tapping into the main PhotinoWindow and Microsoft's hosting magic. Pulled in some tricks from the Blazor version of Photino staying true to my Blazor roots. For the ones who want to take look to the code, dive into the debug branch in the fork mentioned in the main discussion post.
+To facilitate the transition for AspNET developers moving to Photino, I drew inspiration from the AspNET Core playbook. I introduced a new class, PhotinoApplication, akin to WebApplication, and brought in a 'PhotinoAppBuilder' to enhance the existing WebAppBuilder. Several extension methods tap into the main PhotinoWindow and leverage Microsoft's hosting capabilities. Drawing from my roots in Blazor, I've incorporated tricks from the Blazor version of Photino. For those interested in examining the code, please explore the debug branch in the fork mentioned in the primary discussion post.
 
-## Spicing Things Up with IPC Magic
+## Introducing IPC (Inter-Process Communication)
 
-I've added a simple IPC (Inter-Process Communication) channel system, inspired by the one you find in Electron. It's pretty basic for now, but it gets the job done. Messages get sent to channel listeners, and we can grab data back all in a neat, type-safe way. Check out the simple mirroring setup for JavaScript and TypeScript in the `Photino.Final.Sample` it's a mini IPC sample!
+I have implemented a straightforward Inter-Process Communication (IPC) channel system, inspired by the one found in Electron. Although basic at this stage, it effectively fulfills its purpose. Messages are dispatched to channel listeners, and data retrieval is neatly executed in a type-safe manner. Explore the simple mirroring setup for JavaScript and TypeScript in the Photino.Final.Sample – it serves as a miniature IPC sample!
 
-## Wrapping it Up with the Final Mix
+## The Final Sample
+In conclusion, I present the pinnacle of my efforts – the "Photino.Final.Sample" project. This amalgamation encapsulates all the aforementioned tweaks. To streamline integration, I propose incorporating this project into the sample repository. Simply replace references to other projects with the actual NuGet packages, and we should be good to go!
 
-So, here's the grand finale my **"Photino.Final.Sample"** project. It's like a mashup of all the tweaks I've been talking about. I tossed everything in there to see if it all works with the latest changes. To make life easier, think about throwing this project into the sample repository. Just swap out references to other projects with the actual NuGet packages, and we're good to go!
-
-Big thanks to everyone who threw down in this project! 🚀 Your hustle is real, and I appreciate every line of code, idea, and vibe you brought to the table. Hoping this sails through smooth! 🌟
+I extend my sincere gratitude to everyone who has contributed to this project! 🚀 Your dedication is palpable, and I value every line of code, idea, and positive energy brought to the table. I am optimistic that this update will be well-received! 🌟
 
 >P.S. <br>
-I've tested the code with the help of the TestBench project inside the Samples, but only on Windows. I can try the functionalities in Linux using the WSL 2 but I don't have access to a MacOS device, so if someone is willing to help me all the repo are in the main discussion post
+I have conducted testing using the TestBench project within the Samples, albeit exclusively on Windows. While I can explore functionalities on Linux using WSL 2, I lack access to a MacOS device. If anyone is willin
