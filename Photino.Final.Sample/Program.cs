@@ -29,9 +29,9 @@ internal class Program
             .SetSize(800, 600)
             .SetUseOsDefaultSize(false)
             // Registers a channel with a payload of type string named "PHOTINO_TEST_CHANNEL"
-            .RegisterChannelHandler<string>("PHOTINO_TEST_CHANNEL", (sender, message) =>
+            .RegisterChannel<string>("PHOTINO_TEST_CHANNEL", (sender, payload) =>
             {
-                Console.WriteLine($"Received {message} from IPC Renderer");
+                Console.WriteLine($"Received {payload.Data} from IPC Renderer");
                 sender.Emit("Hello from .NET 🤖");
             });
 
