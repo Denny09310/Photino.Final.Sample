@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  useEffect(() => receiveMessage(alert), [])
+    useEffect(() => receiveMessage(console.log), [])
 
   return (
     <>
@@ -53,7 +53,7 @@ function receiveMessage(callback: (data: string) => void) {
   //@ts-ignore
   window.external.receiveMessage((data: string) => {
     const payload = JSON.parse(data) as { key: string, data: string };
-    if (payload.key === "PHOTINO_TEST_CHANNEL") {
+      if (payload.key === "PHOTINO_TEST_CHANNEL") {
       callback(payload.data);
     }
   });

@@ -28,6 +28,7 @@ internal class Program
             .SetTitle("Photino.Final.Sample")
             .SetSize(800, 600)
             .SetUseOsDefaultSize(false)
+            .RegisterInterProcessCommunication()
             // Registers a channel with a payload of type string named "PHOTINO_TEST_CHANNEL"
             .RegisterChannel<string>("PHOTINO_TEST_CHANNEL", (sender, payload) =>
             {
