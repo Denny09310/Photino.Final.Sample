@@ -2,8 +2,9 @@
 using Photino.NET;
 using Photino.NET.Extensions;
 using Photino.NET.IPC;
+using Photino.NET.Options;
 
-internal class Program
+internal static class Program
 {
     [STAThread]
     private static void Main(string[] args)
@@ -21,9 +22,9 @@ internal class Program
             options.WaitUntilReadyTimeout = TimeSpan.FromSeconds(30);
         });
 
-        var (app, window) = builder.BuildApplication();
+        var app = builder.BuildApplication();
 
-        window
+        app.Window
             .Center()
             .SetTitle("Photino.Final.Sample")
             .SetSize(800, 600)
@@ -41,6 +42,6 @@ internal class Program
             inside the environment variables of the launchSettings.json. Else it loads the compiled version in the wwwroot
             folder of the Publish directory, this is written in the .csproj file
         */
-        window.Load(app, url);
+        app.Run(url);
     }
 }

@@ -5,11 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.Final.Sample", "Photino.Final.Sample\Photino.Final.Sample.csproj", "{25056170-F7AD-4E62-B287-EF04AB24165A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.NET.Server", "..\Photino.NET.Server\Photino.NET.Server\Photino.NET.Server.csproj", "{C46BA783-B624-4F06-BC9B-F2C7F7922C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.NET.Server", "..\Photino.NET.Server\Photino.NET.Server\Photino.NET.Server.csproj", "{F0B7F14B-438F-446B-BE5C-2BEA0E7E3F06}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.NET", "..\Photino.NET\Photino.NET\Photino.NET.csproj", "{D5C588E8-7944-4C0C-85BB-7A62C67C51B6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photino.IPC", "..\Photino.NET.IPC\Photino.NET.IPC\Photino.NET.IPC.csproj", "{971F6349-032F-462A-891D-21A0CB8EF6C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photino.NET.IPC", "..\Photino.NET.IPC\Photino.NET.IPC\Photino.NET.IPC.csproj", "{65CC97AE-DF4F-46B8-9565-1CDB8C554B5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +19,14 @@ Global
 		{25056170-F7AD-4E62-B287-EF04AB24165A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25056170-F7AD-4E62-B287-EF04AB24165A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25056170-F7AD-4E62-B287-EF04AB24165A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C46BA783-B624-4F06-BC9B-F2C7F7922C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C46BA783-B624-4F06-BC9B-F2C7F7922C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C46BA783-B624-4F06-BC9B-F2C7F7922C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C46BA783-B624-4F06-BC9B-F2C7F7922C8E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5C588E8-7944-4C0C-85BB-7A62C67C51B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5C588E8-7944-4C0C-85BB-7A62C67C51B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5C588E8-7944-4C0C-85BB-7A62C67C51B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5C588E8-7944-4C0C-85BB-7A62C67C51B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{971F6349-032F-462A-891D-21A0CB8EF6C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{971F6349-032F-462A-891D-21A0CB8EF6C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{971F6349-032F-462A-891D-21A0CB8EF6C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{971F6349-032F-462A-891D-21A0CB8EF6C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0B7F14B-438F-446B-BE5C-2BEA0E7E3F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B7F14B-438F-446B-BE5C-2BEA0E7E3F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B7F14B-438F-446B-BE5C-2BEA0E7E3F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B7F14B-438F-446B-BE5C-2BEA0E7E3F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65CC97AE-DF4F-46B8-9565-1CDB8C554B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CC97AE-DF4F-46B8-9565-1CDB8C554B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CC97AE-DF4F-46B8-9565-1CDB8C554B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CC97AE-DF4F-46B8-9565-1CDB8C554B5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

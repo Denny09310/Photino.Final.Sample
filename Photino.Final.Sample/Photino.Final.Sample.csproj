@@ -23,8 +23,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Photino.NET.Server\Photino.NET.Server\Photino.NET.Server.csproj" />
+		<PackageReference Include="Photino.NET" Version="3.1.17" />
+	</ItemGroup>
+	
+	<ItemGroup>
 	  <ProjectReference Include="..\..\Photino.NET.IPC\Photino.NET.IPC\Photino.NET.IPC.csproj" />
+	  <ProjectReference Include="..\..\Photino.NET.Server\Photino.NET.Server\Photino.NET.Server.csproj" />
 	</ItemGroup>
 
 	<Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(UiRoot)node_modules') ">
@@ -33,14 +37,14 @@
 			<Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
 		</Exec>
 		<Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
-		<Message Importance="high" Text="Restoring dependencies using 'pnpm'. This may take several minutes..." />
-		<Exec WorkingDirectory="$(UiRoot)" Command="pnpm install" />
+		<Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+		<Exec WorkingDirectory="$(UiRoot)" Command="npm install" />
 	</Target>
 
 	<Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
 		<!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
-		<Exec WorkingDirectory="$(UiRoot)" Command="pnpm install" />
-		<Exec WorkingDirectory="$(UiRoot)" Command="pnpm build" />
+		<Exec WorkingDirectory="$(UiRoot)" Command="npm run install" />
+		<Exec WorkingDirectory="$(UiRoot)" Command="npm build" />
 
 		<!-- Include the newly-built files in the publish output -->
 		<ItemGroup>
